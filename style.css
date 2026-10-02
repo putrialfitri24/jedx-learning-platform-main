@@ -1,0 +1,409 @@
+:root {
+    --primary-color: #c9826b;
+    --secondary-color: #e8cfc3;
+    --bg-color: #fffaf7;
+    --dark-color: #3b2924;
+    --text-color: #5f504b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--dark-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.2rem 7%;
+
+    background-color: white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 999;
+}
+
+.logo-navbar {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo-navbar span {
+    color: var(--primary-color);
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-nav a:hover {
+    color: var(--primary-color);
+}
+
+.navbar-extra {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-extra a:hover {
+    color: var(--primary-color);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8rem 7% 4rem;
+}
+
+.hero .content {
+    max-width: 600px;
+}
+
+.subtitle {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin: 1rem 0;
+}
+
+.hero h1 span {
+    color: var(--primary-color);
+}
+
+.hero .content > p:not(.subtitle) {
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.cta {
+    display: inline-block;
+
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    border-radius: 0.5rem;
+}
+
+.cta:hover {
+    background-color: var(--dark-color);
+}
+
+.hero-image {
+    width: 40%;
+}
+
+.hero-image img {
+    width: 100%;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about,
+.course,
+.contact {
+    padding: 6rem 7%;
+}
+
+.about h2,
+.course h2,
+.contact h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.about h2 span,
+.course h2 span,
+.contact h2 span {
+    color: var(--primary-color);
+}
+
+.about > p,
+.course > p,
+.contact > p {
+    text-align: center;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    margin-top: 3rem;
+}
+
+.about-img {
+    flex: 1;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.about .content {
+    flex: 1;
+}
+
+.about .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about .content p {
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+
+/* ================= PRODUK ================= */
+
+.course .row {
+    margin-top: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+}
+
+.menu-card {
+    background-color: white;
+
+    border: 1px solid var(--secondary-color);
+
+    border-radius: 1rem;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+}
+
+.menu-card-content {
+    padding: 1.5rem;
+}
+
+.menu-card-content span {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.menu-card-content h3 {
+    margin: 0.5rem 0;
+}
+
+.menu-card-content p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.menu-card-content strong {
+    display: block;
+    margin: 1rem 0;
+
+    font-size: 1.1rem;
+}
+
+.menu-card-content a {
+    display: block;
+
+    text-align: center;
+
+    padding: 0.7rem;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    border-radius: 0.5rem;
+}
+
+.menu-card-content a:hover {
+    background-color: var(--dark-color);
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-box {
+    display: flex;
+    justify-content: center;
+
+    gap: 2rem;
+
+    margin-top: 2rem;
+}
+
+.contact-item {
+    background-color: white;
+
+    border: 1px solid var(--secondary-color);
+
+    border-radius: 1rem;
+
+    padding: 2rem;
+
+    width: 250px;
+
+    text-align: center;
+}
+
+.contact-item svg {
+    color: var(--primary-color);
+
+    width: 35px;
+    height: 35px;
+
+    margin-bottom: 1rem;
+}
+
+.contact-item p {
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: var(--dark-color);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 2rem;
+}
+
+footer .socials {
+    display: flex;
+    justify-content: center;
+
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+}
+
+footer .socials a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    #hamburger-menu {
+        display: block;
+    }
+
+    .navbar-nav {
+        position: absolute;
+
+        top: 100%;
+        right: -100%;
+
+        width: 70%;
+
+        background-color: white;
+
+        flex-direction: column;
+
+        padding: 2rem;
+
+        transition: 0.3s;
+    }
+
+    .navbar-nav.active {
+        right: 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+
+        padding-top: 8rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        width: 80%;
+
+        margin-top: 2rem;
+    }
+
+    .about .row {
+        flex-direction: column;
+    }
+
+    .course .row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box {
+        flex-direction: column;
+        align-items: center;
+    }
+}
